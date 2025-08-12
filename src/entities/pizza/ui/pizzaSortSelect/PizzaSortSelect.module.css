@@ -1,0 +1,76 @@
+.categories {
+	width: clamp(8.125rem, -5.375rem + 48vw, 15.625rem);
+	max-width: 100%;
+	font-family: var(--font-family-accent);
+	position: relative;
+	transition: color var(--duration) ease-in-out;
+}
+
+.listboxButton {
+	width: 100%;
+	padding: 0.625rem 0.938rem;
+	border: var(--border);
+	border-radius: 0.375rem;
+	background-color: var(--white);
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 1rem;
+	user-select: none;
+	transition:
+		border var(--duration) ease-in-out,
+		background-color var(--duration) ease-in-out;
+}
+
+.listboxButton:hover {
+	background-color: var(--orange-btn-bg);
+	border: 0.063rem solid var(--orange);
+}
+
+.listboxArrow:hover {
+	color: var(--dark-orange);
+}
+
+.listboxOptions {
+	margin-top: 0.25rem;
+	max-height: 12.5rem;
+	overflow-y: auto;
+	border: 0.063rem solid #ccc;
+	border-radius: 0.375rem;
+	background-color: var(--white);
+	box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+	position: absolute;
+	width: 100%;
+	z-index: 1000;
+	padding: 0;
+	list-style: none;
+}
+
+.categories:hover .listboxButton {
+	background-color: var(--orange-btn-bg);
+	border: 0.063rem solid var(--orange);
+}
+
+.categories:hover .listboxArrow {
+	color: var(--dark-orange);
+}
+
+.option {
+	padding: 0.5rem 0.75rem;
+	cursor: pointer;
+	transition:
+		color var(--duration) ease-in-out,
+		background-color var(--duration) ease-in-out;
+}
+
+.option:hover {
+	background-color: var(--orange-btn-color);
+	color: var(--dark-orange);
+}
+
+.optionSelected {
+	font-weight: 700;
+	background-color: var(--orange-btn-color);
+	color: var(--dark-orange);
+}

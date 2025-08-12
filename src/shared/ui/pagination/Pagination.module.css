@@ -1,0 +1,19 @@
+.container {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+	margin-top: 2rem;
+}
+.button {
+	transition: color var(--duration) ease-in-out;
+	color: var(--orange-btn-color);
+}
+.button:hover {
+	color: var(--light-orange);
+}
+.pageInfo {
+	font-size: 1.4rem;
+	font-weight: 600;
+	color: var(--dark-orange);
+	text-align: center;
+}

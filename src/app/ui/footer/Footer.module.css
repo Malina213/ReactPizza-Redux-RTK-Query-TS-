@@ -1,0 +1,27 @@
+.footer {
+	margin-top: auto;
+	background-color: var(--black);
+	color: #333;
+}
+
+.footerInner {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+.footerTop {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-bottom: 15px;
+}
+
+@media (max-width: 599px) {
+	.footerInner {
+		text-align: center;
+	}
+	.footerTop {
+		flex-direction: column;
+	}
+}

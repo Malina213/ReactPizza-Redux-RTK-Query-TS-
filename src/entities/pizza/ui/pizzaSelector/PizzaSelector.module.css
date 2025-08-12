@@ -1,0 +1,109 @@
+.radioInputs {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	border-radius: 0.5rem;
+	background-color: #eee;
+	box-sizing: border-box;
+	box-shadow: 0 0 0 0.063rem rgba(0, 0, 0, 0.06);
+	padding: 0.25rem;
+	font-size: 0.875rem;
+}
+
+.radio {
+	flex: 1 1 auto;
+	text-align: center;
+	position: relative;
+}
+
+.radio input {
+	display: none;
+}
+
+.name {
+	display: flex;
+	cursor: pointer;
+	align-items: center;
+	justify-content: center;
+	border-radius: 0.5rem;
+	border: none;
+	padding: 0.7rem 0.2rem;
+	color: rgba(51, 65, 85, 1);
+	transition: all 0.15s ease-in-out;
+	position: relative;
+}
+
+.radio input:checked + .name {
+	background-color: #fff;
+	font-weight: 600;
+	box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.1);
+	animation: select 0.3s ease;
+}
+
+.radio:hover .name {
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+@keyframes select {
+	0% {
+		transform: scale(0.95);
+	}
+	50% {
+		transform: scale(1.05);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.radio input:checked + .name::before,
+.radio input:checked + .name::after {
+	content: '';
+	position: absolute;
+	width: 0.25rem;
+	height: 0.25rem;
+	border-radius: 50%;
+	background: #3b82f6;
+	opacity: 0;
+	animation: particles 0.5s ease forwards;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.radio input:checked + .name::before {
+	top: -0.5rem;
+	animation-name: particlesUp;
+}
+
+.radio input:checked + .name::after {
+	bottom: -0.5rem;
+	animation-name: particlesDown;
+}
+
+@keyframes particlesUp {
+	0% {
+		opacity: 0;
+		transform: translateX(-50%) translateY(0);
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: translateX(-50%) translateY(-0.313rem);
+	}
+}
+
+@keyframes particlesDown {
+	0% {
+		opacity: 0;
+		transform: translateX(-50%) translateY(0);
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: translateX(-50%) translateY(0.313rem);
+	}
+}

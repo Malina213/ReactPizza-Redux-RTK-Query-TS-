@@ -1,0 +1,19 @@
+.filterTitle {
+	margin-left: 1rem;
+}
+
+.filtersBody {
+	display: flex;
+	align-items: center;
+	column-gap: clamp(0.3rem, -1.95rem + 8vw, 1.3rem);
+}
+
+@media (max-width: 850px) {
+	.filters {
+		flex-direction: column;
+		row-gap: 1rem;
+	}
+	.filterTitle {
+		margin-left: 0;
+	}
+}

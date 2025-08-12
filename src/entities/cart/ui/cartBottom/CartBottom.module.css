@@ -1,0 +1,67 @@
+.cartBottom {
+	margin-top: auto;
+	position: relative;
+}
+
+.cartCostItem {
+	display: flex;
+	align-items: center;
+	column-gap: 0.313rem;
+	font-size: clamp(1rem, 0.788rem + 0.62vw, 1.25rem);
+}
+
+.cartCostItem:nth-child(2) .cartCostDesc {
+	color: var(--orange);
+}
+
+.cartCostDesc {
+	font-weight: 700;
+}
+
+.cartPaymentButton {
+	padding: 1rem 1.563rem;
+	background-color: var(--orange, #fe5f1e);
+	transition: background-color 0.15s ease-in-out;
+	border: none;
+	cursor: pointer;
+	border-radius: 0.5rem;
+}
+
+.cartBackButton {
+	column-gap: 0.313rem;
+	font-weight: 600;
+	font-size: 1rem;
+	padding: 1rem 1.25rem;
+	border: 0.063rem solid var(--grey);
+	color: var(--grey);
+	border-radius: 1.875rem;
+	background-color: transparent;
+	cursor: pointer;
+	transition:
+		color 0.15s ease-in-out,
+		border-color 0.15s ease-in-out;
+}
+
+.cartBackButton:hover {
+	color: var(--dark-grey);
+	border-color: var(--dark-grey);
+}
+
+@media (max-width: 700px) {
+	.cartItemInner {
+		flex-direction: column;
+	}
+	.cartItemRight {
+		margin-top: 0.625rem;
+	}
+}
+
+@media (max-width: 550px) {
+	.cartBackButton span {
+		display: none;
+	}
+	.cartBackButton,
+	.cartPaymentButton {
+		padding: 0.875rem 1.25rem;
+	}
+}

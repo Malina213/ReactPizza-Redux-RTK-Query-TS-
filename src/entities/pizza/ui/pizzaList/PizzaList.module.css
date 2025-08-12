@@ -1,0 +1,30 @@
+.pizzaList {
+	display: grid;
+	gap: 3.125rem;
+	margin-top: 2.5rem;
+}
+@media (min-width: 650px) {
+	.pizzaList {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (min-width: 850px) {
+	.pizzaList {
+		gap: 20px;
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (min-width: 1200px) {
+	.pizzaList {
+		gap: 30px;
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+@media (min-width: 1400px) {
+	.pizzaList {
+		grid-template-columns: repeat(5, 1fr);
+	}
+}

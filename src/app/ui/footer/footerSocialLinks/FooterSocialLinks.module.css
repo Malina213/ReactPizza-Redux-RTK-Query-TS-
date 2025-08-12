@@ -1,0 +1,66 @@
+.footerSocialLinks {
+	display: flex;
+	align-items: center;
+	column-gap: 0.625rem;
+}
+
+.socialContainer {
+	width: 3.25rem;
+	height: 3.25rem;
+	border-radius: 50%;
+	background-color: rgb(44, 44, 44);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.transition-duration {
+	transition-duration: var(--duration);
+}
+
+.containerOne:hover {
+	background-color: var(--color-instagram);
+}
+
+.containerTwo:hover {
+	background-color: var(--color-twitter);
+}
+
+.containerThree:hover {
+	background-color: var(--color-linkedin);
+}
+
+.containerFour:hover {
+	background-color: var(--color-whatsapp);
+}
+
+.socialContainer:active {
+	transform: scale(var(--color-active-scale));
+}
+
+.socialContainer,
+.containerOne:hover,
+.containerTwo:hover,
+.containerThree:hover,
+.containerFour:hover,
+.socialContainer:active {
+	transition-property: background-color, color, transform;
+	transition-timing-function: ease-in-out;
+	transition-duration: var(--duration);
+}
+
+.socialSvg {
+	width: 1.063rem;
+}
+
+.socialSvg path {
+	fill: var(--white);
+}
+
+@media (max-width: 599px) {
+	.footerSocialLinks {
+		margin-top: 1rem;
+	}
+}

@@ -1,0 +1,44 @@
+:root {
+	--black: #232323;
+	--white: #ffffff;
+	--grey: #adadad;
+	--background: #ffdf8c;
+	--gray-line: #f6f6f6;
+	--orange: #fe5f1e;
+	--dark-orange: rgb(209, 87, 0);
+	--dark-grey: #8a8a8a;
+	--light-orange: rgb(255, 181, 129);
+	--orange-opacity: #050404a8;
+	--orange-btn-bg: rgb(255, 240, 230);
+	--orange-btn-color: rgb(255, 210, 179);
+
+	--duration: 0.2s;
+	--font-family-base: 'Inter', sans-serif;
+	--font-family-accent: 'Kumbh Sans', sans-serif;
+
+	--border: 1px solid var(--gray-line);
+
+	--color-instagram: #d62976;
+	--color-twitter: #00acee;
+	--color-linkedin: #0072b1;
+	--color-whatsapp: #128c7e;
+
+	--container-width: 90%;
+	--color-active-scale: 0.9;
+
+	/* Breakpoints */
+	--breakpoint-sm: 480px;
+	--breakpoint-md: 768px;
+	--breakpoint-lg: 1024px;
+	--breakpoint-xl: 1280px;
+	--breakpoint-2xl: 1536px;
+}
+
+:root.dark {
+	/* Dark theme variables */
+	--black: #ffffff;
+	--white: #1a1a1a;
+	--background: #2d2d2d;
+	--gray-line: #404040;
+	--grey: #888888;
+}

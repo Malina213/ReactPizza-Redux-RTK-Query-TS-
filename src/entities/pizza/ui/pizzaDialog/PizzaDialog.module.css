@@ -1,0 +1,152 @@
+.dialogOverlay {
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.3);
+	backdrop-filter: blur(3px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 50;
+}
+
+.dialogPanel {
+	background: var(--white);
+	border-radius: 1rem;
+	padding: 2rem;
+	max-width: 34.375rem;
+	width: 100%;
+	box-shadow:
+		0 0.5rem 2.5rem rgba(20, 20, 20, 0.19),
+		0 0.125rem 0.5rem rgba(0, 0, 0, 0.07);
+	margin: 0 1rem;
+}
+
+.dialogPanelInner {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	align-items: center;
+}
+
+.dialogPanelRight {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding-top: 1.875rem;
+}
+
+.dialogPanelText {
+	display: flex;
+	flex-direction: column;
+	row-gap: 1.25rem;
+}
+
+.dialogTitle {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 1.35rem;
+	font-weight: bold;
+	margin-bottom: 0.25rem;
+}
+
+.dialogDescr {
+	font-size: 1rem;
+	color: var(--grey);
+}
+
+.dialogImg {
+	width: 15rem;
+	border-radius: 0.75rem;
+	margin: 0 auto;
+	display: block;
+}
+
+.dialogFooter {
+	width: 100%;
+	margin-top: 1.875rem;
+	gap: 1rem;
+}
+
+.dialogPrice {
+	font-weight: 600;
+	font-size: 1.12rem;
+}
+
+.dialogCloseBtn {
+	display: inline-block;
+	padding: 1.125rem 1.563rem;
+	color: var(--white);
+	font-weight: 700;
+	width: 100%;
+	background-color: var(--orange, #fe5f1e);
+	transition: background-color 0.15s ease-in-out;
+}
+
+.dialogRadioSelector {
+	display: flex;
+	flex-direction: column;
+	row-gap: 0.313rem;
+}
+
+.dialogEnter {
+	transition: opacity 200ms;
+}
+
+.dialogEnterFrom {
+	opacity: 0;
+}
+
+.dialogEnterTo {
+	opacity: 1;
+}
+
+.dialogLeave {
+	transition: opacity 200ms;
+}
+
+.dialogLeaveFrom {
+	opacity: 1;
+}
+
+.dialogLeaveTo {
+	opacity: 0;
+}
+
+.panelEnter {
+	transition:
+		opacity 200ms,
+		transform 200ms;
+}
+
+.panelEnterFrom {
+	opacity: 0;
+	transform: scale(0.97);
+}
+
+.panelEnterTo {
+	opacity: 1;
+	transform: scale(1);
+}
+
+.panelLeave {
+	transition:
+		opacity 160ms,
+		transform 160ms;
+}
+
+.panelLeaveFrom {
+	opacity: 1;
+	transform: scale(1);
+}
+
+.panelLeaveTo {
+	opacity: 0;
+	transform: scale(0.97);
+}
+
+.dialogPriceBlock {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	position: relative;
+}

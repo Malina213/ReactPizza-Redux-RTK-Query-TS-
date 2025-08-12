@@ -1,0 +1,11 @@
+.nutritionList {
+	display: flex;
+	font-size: 0.875rem;
+	flex-direction: column;
+	color: var(--white);
+	gap: 0.25rem;
+}
+.nutritionTitle {
+	margin-bottom: 0.375rem;
+	color: var(--grey);
+}
