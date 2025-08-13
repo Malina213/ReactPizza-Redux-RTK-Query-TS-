@@ -1,4 +1,4 @@
-import { PizzaListContainer } from '@entities/pizza/ui/pizzaListContainer/PizzaListContainer'
+import { PizzaListContainer } from '@entities/pizza/ui'
 import { Filters } from '@features/filters/ui/Filters'
 
 export const Home = () => {

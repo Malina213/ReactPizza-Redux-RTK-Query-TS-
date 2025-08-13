@@ -1,6 +1,5 @@
 import type { ReactNode } from 'react'
-import { Loader } from '@shared/ui/loader/Loader'
-import { Error } from '@shared/ui/error/Error'
+import { Loader, Error } from '..'
 
 interface DataLoaderWrapperProps {
 	isLoading: boolean

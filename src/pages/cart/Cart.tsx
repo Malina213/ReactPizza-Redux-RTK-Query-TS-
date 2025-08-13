@@ -1,6 +1,4 @@
-import { CartBottom } from '@entities/cart/ui/cartBottom/CartBottom'
-import { CartList } from '@entities/cart/ui/cartList/CartList'
-import { CartTop } from '@entities/cart/ui/cartTop/CartTop'
+import { CartTop, CartList, CartBottom } from '@entities/cart/ui'
 import styles from './Cart.module.css'
 export const Cart = () => {
 	return (

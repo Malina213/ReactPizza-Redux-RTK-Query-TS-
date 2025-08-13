@@ -1,4 +1,4 @@
-import { CustomLink } from '@shared/ui/customLink/CustomLink'
+import { CustomLink } from '@shared/ui'
 import styles from './FooterContacts.module.css'
 
 export const FooterContacts: React.FC = () => (

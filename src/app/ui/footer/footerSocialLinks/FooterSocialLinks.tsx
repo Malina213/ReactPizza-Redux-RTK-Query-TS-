@@ -1,4 +1,4 @@
-import { CustomLink } from '@shared/ui/customLink/CustomLink'
+import { CustomLink } from '@shared/ui'
 import { FaInstagram } from 'react-icons/fa'
 import { IoLogoTwitter } from 'react-icons/io'
 import { FaWhatsapp } from 'react-icons/fa'

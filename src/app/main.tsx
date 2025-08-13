@@ -4,7 +4,6 @@ import { Provider } from 'react-redux'
 import { Router } from './routes/Router'
 import { store } from './store/store'
 import { ThemeProvider } from '@entities/theme/model/ThemeProvider'
-
 import '@assets/style/main.css'
 
 createRoot(document.getElementById('root')!).render(

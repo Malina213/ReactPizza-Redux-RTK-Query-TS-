@@ -1,6 +1,6 @@
 import React, { type InputHTMLAttributes, useState, useCallback } from 'react'
 import { sanitizeHTML } from '@shared/utils/validation'
-import styles from './Input.module.css'
+import styles from './CustomInput.module.css'
 
 interface CustomInputProps
 	extends Omit<InputHTMLAttributes<HTMLInputElement>, 'onChange'> {

@@ -2,7 +2,7 @@ import { HiOutlineMinusSmall } from 'react-icons/hi2'
 import { GoPlus } from 'react-icons/go'
 import React from 'react'
 import { Button } from '..'
-import styles from './CounterCart.module.css'
+import styles from './Counter.module.css'
 
 interface CounterCartProps {
 	quantity: number
@@ -11,7 +11,7 @@ interface CounterCartProps {
 	disabled?: boolean
 }
 
-export const CounterCart = React.memo(
+export const Counter = React.memo(
 	({
 		quantity,
 		onIncrement,
@@ -61,5 +61,3 @@ export const CounterCart = React.memo(
 		)
 	}
 )
-
-CounterCart.displayName = 'CounterCart'

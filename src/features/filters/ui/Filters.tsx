@@ -1,8 +1,8 @@
-import { PizzaSortSelect } from '@entities/pizza/ui/pizzaSortSelect/PizzaSortSelect'
 import { useDispatch, useSelector } from 'react-redux'
 import { updateFilters } from '@app/store/slices/filterSlices'
 import type { RootState } from '@app/store/store'
 import { Categories } from '@features/categories/ui/Categories'
+import { PizzaSortSelect } from '@entities/pizza/ui'
 import styles from './Filters.module.css'
 
 export const Filters = () => {

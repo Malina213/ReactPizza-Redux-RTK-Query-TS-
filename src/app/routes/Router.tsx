@@ -1,7 +1,7 @@
 import { lazy, Suspense } from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router'
 import { Layout } from '@app/layouts/Layout'
-import { Loader } from '@shared/ui/loader/Loader'
+import { Loader } from '@shared/ui'
 
 const Home = lazy(() =>
 	import('@pages/home/Home').then(module => ({ default: module.Home }))

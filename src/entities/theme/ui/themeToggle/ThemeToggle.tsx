@@ -1,5 +1,5 @@
 import { useTheme } from '@entities/theme/model/ThemeProvider'
-import { CustomInput } from '../../../../shared/ui/Input/Input'
+import { CustomInput } from '../../../../shared/ui/customInput/CustomInput'
 import styles from './ThemeToggle.module.css'
 
 export const ThemeToggle = () => {

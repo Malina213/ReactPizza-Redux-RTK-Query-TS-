@@ -2,7 +2,7 @@ import React, { useState, type FormEvent } from 'react'
 import { Button } from '@shared/ui/Button'
 import { FiChevronRight } from 'react-icons/fi'
 import { validatePromoCode } from '@shared/utils/validation'
-import { CustomInput } from '@shared/ui/Input/Input'
+import { CustomInput } from '@shared/ui/customInput/CustomInput'
 import styles from './PromoModal.module.css'
 
 interface FormModalProps {

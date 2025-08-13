@@ -1,11 +1,10 @@
 import type { Cart } from '@entities/cart/types'
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import type { AddToCartRequest } from 'types'
 
 const BASE_URL = 'https://679231bbcf994cc68049167c.mockapi.io/'
 
 // Валидация данных корзины
-const validateCartItem = (item: AddToCartRequest): boolean => {
+const validateCartItem = (item: Cart): boolean => {
 	return (
 		typeof item.name === 'string' &&
 		item.name.length > 0 &&
@@ -54,7 +53,7 @@ export const cartApi = createApi({
 			providesTags: ['Cart']
 		}),
 
-		addToCart: builder.mutation<Cart, AddToCartRequest>({
+		addToCart: builder.mutation<Cart, Cart>({
 			query: body => {
 				if (!validateCartItem(body)) {
 					throw new Error('Invalid cart item data')

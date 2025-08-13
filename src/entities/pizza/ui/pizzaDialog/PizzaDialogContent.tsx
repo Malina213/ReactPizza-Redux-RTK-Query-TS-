@@ -1,16 +1,16 @@
 import { DialogTitle } from '@headlessui/react'
-import { PizzaPopover } from '@entities/pizza/ui/pizzaTooltip/PizzaPopover'
-import { usePizzaOptions } from '@entities/pizza/hooks/usePizzaOptions'
-import { PizzaDialogFooter } from './PizzaDialogFooter'
-import { PizzaSelector } from '../pizzaSelector/PizzaSelector'
 import type { Nutrition } from '@entities/pizza/types'
-import styles from './PizzaDialog.module.css'
 import { doughOptions, sizeOptions } from '@entities/pizza/data'
 import {
 	useAddToCartMutation,
 	useGetCartQuery,
 	useUpdateCartItemQuantityMutation
 } from '@entities/cart/api/cartApi'
+import { PizzaPopover } from '../pizzaPopover/PizzaPopover'
+import { PizzaDialogFooter } from './PizzaDialogFooter'
+import { PizzaSelector } from '../pizzaSelector/PizzaSelector'
+import { usePizzaOptions } from '@entities/pizza/hooks/usePizzaOptions'
+import styles from './PizzaDialog.module.css'
 
 interface PizzaDialogContentProps {
 	name: string
@@ -71,7 +71,8 @@ export const PizzaDialogContent = ({
 					dough: doughLabel,
 					size: sizeLabel,
 					price: computedPrice,
-					quantity: 1
+					quantity: 1,
+					id: ''
 				}).unwrap()
 			}
 			closeDialog()

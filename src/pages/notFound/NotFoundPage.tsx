@@ -1,4 +1,4 @@
-import { CustomLink } from '@shared/ui/customLink/CustomLink'
+import { CustomLink } from '@shared/ui'
 import styles from './NotFoundPage.module.css'
 
 export const NotFoundPage = () => {

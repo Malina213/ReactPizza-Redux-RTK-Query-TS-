@@ -1,5 +1,4 @@
-import { Footer } from '@app/ui/footer/Footer'
-import { Header } from '@app/ui/header/Header'
+import { Footer, Header } from '@app/ui'
 import { Outlet } from 'react-router'
 
 export const Layout = () => {

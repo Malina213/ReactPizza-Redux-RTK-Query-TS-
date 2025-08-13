@@ -1,9 +1,9 @@
-import type { RadioOption } from '@entities/pizza/types'
+import type { PizzaOptions } from '@entities/pizza/types'
 import styles from './PizzaSelector.module.css'
 
 interface RadioSelectorProps<T extends string> {
 	name: string
-	options: RadioOption<T>[]
+	options: PizzaOptions<T>[]
 	selectedValue: T
 	onChange: (value: T) => void
 }

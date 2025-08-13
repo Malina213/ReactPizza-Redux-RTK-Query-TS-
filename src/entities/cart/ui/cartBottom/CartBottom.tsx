@@ -1,13 +1,11 @@
-import { Button } from '@shared/ui/Button'
-import { CustomLink } from '@shared/ui/customLink/CustomLink'
 import { GoChevronLeft } from 'react-icons/go'
 import { useDispatch } from 'react-redux'
-import { CartSummary } from './CartSummary'
-import { useCartSummary } from '@entities/cart/hooks/useCartSummary'
 import { clearPromo } from '@app/store/slices/promoSlice'
-import styles from './CartBottom.module.css'
 import { useGetCartQuery } from '@entities/cart/api/cartApi'
-import { useCartActions } from '@entities/cart/hooks/useCartActions'
+import { Button, CustomLink } from '@shared/ui'
+import { useCartActions, useCartSummary } from '@entities/cart/hooks'
+import { CartSummary } from './CartSummary'
+import styles from './CartBottom.module.css'
 
 export const CartBottom = () => {
 	const { data: cartItems = [] } = useGetCartQuery()

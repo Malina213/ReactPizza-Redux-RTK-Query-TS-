@@ -1,6 +1,6 @@
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
+import { Button } from '..'
 import styles from './Pagination.module.css'
-import { Button } from '@shared/ui/Button'
 
 interface PaginationProps {
 	currentPage: number
