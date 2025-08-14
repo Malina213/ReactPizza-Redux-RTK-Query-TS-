@@ -46,10 +46,9 @@
 .pizzaCardDesc {
 	font-size: 0.875rem;
 	font-family: var(--font-family-accent);
-	color: var(--grey);
+	color: var(--dark-grey);
 	font-weight: 500;
 	text-align: start;
-
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 4;
@@ -79,21 +78,21 @@
 	display: flex;
 	align-items: center;
 	gap: 0.375rem;
-	background-color: rgb(255, 240, 230);
-	color: var(--dark-orange);
+	background-color: #fff3e0;
+	color: #bf360c;
 	transition:
 		background-color var(--duration) ease-in-out,
 		color var(--duration) ease-in-out;
 }
 
 .pizzaCardButton:hover {
-	background-color: var(--orange-btn-color);
-	color: var(--dark-orange);
+	background-color: #e65100;
+	color: white;
 }
 
 .pizzaCardButton:active {
-	background-color: rgb(255, 240, 230);
-	color: var(--orange-btn-color);
+	background-color: #ffcc80;
+	color: #bf360c;
 }
 
 @media (max-width: 650px) {

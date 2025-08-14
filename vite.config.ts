@@ -13,7 +13,8 @@ export default defineConfig({
 			'@pages': path.resolve(__dirname, 'src/pages'),
 			'@api': path.resolve(__dirname, 'src/api'),
 			'@assets': path.resolve(__dirname, 'src/assets'),
-			'@data': path.resolve(__dirname, 'src/data')
+			'@data': path.resolve(__dirname, 'src/data'),
+			'@public': path.resolve(__dirname, 'src/public')
 		}
 	},
 	build: {

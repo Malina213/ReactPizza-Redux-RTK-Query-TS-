@@ -30,7 +30,7 @@ export const PizzaCard = memo(
 								width={230}
 								height={230}
 								className={styles.pizzaCardImage}
-								loading='lazy'
+								loading='eager'
 							/>
 							<h4 className={styles.pizzaCardTitle}>{name}</h4>
 							<p className={`${styles.pizzaCardDesc} h5`}>{desc}</p>

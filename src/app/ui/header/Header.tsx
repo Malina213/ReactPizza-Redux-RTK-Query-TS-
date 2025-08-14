@@ -1,4 +1,4 @@
-import logoSvg from '../../../../public/img/pizza-logo.svg'
+import logoSvg from '@public/img/svg/pizza-logo.svg'
 import { IoCartOutline } from 'react-icons/io5'
 import { RiMoneyEuroBoxLine } from 'react-icons/ri'
 import { useState, useMemo } from 'react'

@@ -1,4 +1,5 @@
 import styles from './Empty.module.css'
+import empty from '@public/img/empty.webp'
 
 export const Empty = () => {
 	return (
@@ -12,8 +13,8 @@ export const Empty = () => {
 				className={styles.emptyImg}
 				width={500}
 				height={355}
-				src='../../../../public/img/empty.png'
-				alt='Пусто'
+				src={empty}
+				alt='Пустой каталог'
 			/>
 		</div>
 	)

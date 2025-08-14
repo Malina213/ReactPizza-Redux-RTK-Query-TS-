@@ -5,9 +5,10 @@
 		<link
 			rel="icon"
 			type="image/svg+xml"
-			href="/img/pizza-logo.svg"
+			href="/img/svg/pizza-logo.svg"
 			crossorigin="anonymous"
 		/>
+		<link rel="preconnect" href="https://679231bbcf994cc68049167c.mockapi.io" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="csrf-token" content="{{ csrf_token }}" />
 		<meta
@@ -21,14 +22,10 @@
 			"
 		/>
 		<meta
-			http-equiv="Content-Security-Policy"
-			content="
-			default-src 'self';
-			script-src 'self' 'unsafe-inline';
-			style-src 'self' 'unsafe-inline';
-			img-src 'self' data: https:;
-			connect-src 'self' https://679231bbcf994cc68049167c.mockapi.io;
-			"
+			name="description"
+			content="Закажите вкуснейшую пиццу с доставкой! 
+			Свежие ингредиенты, ручная подготовка, быстрая доставка. 
+			Попробуйте наши хиты: Пепперони Фреш, Чоризо, Сырная и другие."
 		/>
 		<title>ReactPizza</title>
 	</head>

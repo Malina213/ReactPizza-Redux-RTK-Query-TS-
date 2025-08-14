@@ -10,6 +10,7 @@
 	background-color: var(--bg-color);
 	border-radius: 100%;
 	border: 2px solid var(--orange);
+	color: var(--orange);
 }
 
 .input {
@@ -19,40 +20,4 @@
 	height: 100%;
 	z-index: 10;
 	opacity: 0;
-}
-
-.icon {
-	position: absolute;
-	top: calc(50% -13px);
-	left: calc(50% -13px);
-	width: 26px;
-	height: 26px;
-}
-
-.icon.iconMoon {
-	fill: var(--orange);
-}
-
-.icon.iconSun {
-	stroke: var(--orange);
-	display: none;
-}
-
-.input:checked ~ .icon.iconSun {
-	display: block;
-}
-
-.input:checked ~ .icon.iconMoon {
-	display: none;
-}
-
-.theme:active {
-	box-shadow: 0px 0px var(--orange);
-	transform: translate(3px, 3px);
-}
-@media (max-width: 600px) {
-	.theme {
-		width: 36px;
-		height: 36px;
-	}
 }

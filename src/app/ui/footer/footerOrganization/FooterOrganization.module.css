@@ -6,10 +6,17 @@
 }
 
 .footerPrivacy {
-	color: #555;
+	color: #9e9e9e;
 	text-decoration: none;
+	transition: color 0.2s ease;
 }
 
 .footerPrivacy:hover {
+	color: #ffffff;
 	text-decoration: underline;
+}
+
+.footer a:focus {
+	outline: 2px solid #ffffff;
+	outline-offset: 2px;
 }

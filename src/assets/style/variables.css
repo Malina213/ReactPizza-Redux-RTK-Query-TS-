@@ -25,20 +25,9 @@
 
 	--container-width: 90%;
 	--color-active-scale: 0.9;
-
-	/* Breakpoints */
-	--breakpoint-sm: 480px;
-	--breakpoint-md: 768px;
-	--breakpoint-lg: 1024px;
-	--breakpoint-xl: 1280px;
-	--breakpoint-2xl: 1536px;
 }
 
 :root.dark {
 	/* Dark theme variables */
-	--black: #ffffff;
-	--white: #1a1a1a;
-	--background: #2d2d2d;
-	--gray-line: #404040;
-	--grey: #888888;
+	/* Здесь надо подобрать цвета */
 }
