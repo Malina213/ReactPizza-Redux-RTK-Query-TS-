@@ -33,8 +33,10 @@ export const usePaginationPizzas = (
 
 	const filteredPizzas = useFilteredPizzas(pizzas, filters)
 
-	const totalPages = Math.ceil(filteredPizzas.length / ITEMS_PER_PAGE)
-
+	const totalPages = useMemo(
+		() => Math.ceil(filteredPizzas.length / ITEMS_PER_PAGE),
+		[filteredPizzas]
+	)
 	const pizzasOnPage = useMemo(() => {
 		const start = (page - 1) * ITEMS_PER_PAGE
 		return filteredPizzas.slice(start, start + ITEMS_PER_PAGE)

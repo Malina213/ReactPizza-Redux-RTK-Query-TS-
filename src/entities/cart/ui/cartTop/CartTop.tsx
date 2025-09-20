@@ -3,11 +3,18 @@ import { BsBucket } from 'react-icons/bs'
 import { Button } from '@shared/ui/Button'
 import { useCartActions } from '@entities/cart/hooks/useCartActions'
 import { useGetCartQuery } from '@entities/cart/api/cartApi'
+import { useCallback } from 'react'
 import styles from './CartTop.module.css'
 
 export const CartTop = () => {
 	const { data: cartItems = [] } = useGetCartQuery()
 	const { handleClearCart } = useCartActions()
+
+	const handleClearWithConfirmation = useCallback(() => {
+		if (window.confirm('Вы уверены, что хотите очистить корзину?')) {
+			handleClearCart()
+		}
+	}, [handleClearCart])
 
 	return (
 		<div className={`${styles.cartTop} flexBetween`}>
@@ -20,7 +27,7 @@ export const CartTop = () => {
 					<Button
 						className={styles.cartBusketButton}
 						aria-label='Очистить корзину'
-						onClick={handleClearCart}
+						onClick={handleClearWithConfirmation}
 					>
 						<BsBucket />
 						<span>Очистить корзину</span>

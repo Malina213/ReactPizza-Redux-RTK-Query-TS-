@@ -2,7 +2,7 @@
 	display: inline-block;
 	width: 0.813rem;
 	height: 0.813rem;
-	border: 0.125rem solid var(--white);
+	border: 0.125rem solid var(--black);
 	border-left-color: transparent;
 	border-radius: 50%;
 	animation: spin 1s linear infinite;

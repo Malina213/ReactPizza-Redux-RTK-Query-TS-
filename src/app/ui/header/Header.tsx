@@ -14,6 +14,7 @@ export const Header = () => {
 	const { data: cartItems = [] } = useGetCartQuery()
 	const [isOpen, setIsOpen] = useState(false)
 	const location = useLocation()
+	console.log('Header')
 
 	const cartItemsCount = useMemo(() => cartItems.length, [cartItems])
 	const isCartPage = location.pathname === '/cart'

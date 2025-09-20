@@ -1,20 +1,21 @@
 import { GrFormClose } from 'react-icons/gr'
-import { CounterCart } from '@shared/ui/counter/CounterCart'
 import { Button } from '@shared/ui/Button'
 import { useCartActions } from '@entities/cart/hooks/useCartActions'
-import { memo } from 'react'
-import styles from './CartItem.module.css'
+import { memo, useCallback } from 'react'
 import type { Cart } from '@entities/cart/types'
+import { CounterCart } from '@shared/ui'
+import styles from './CartItem.module.css'
 
 export const CartItem = memo(
 	({ id, name, dough, size, imageUrl, price, quantity }: Cart) => {
-		const { handleIncrement, handleDecrement, handleRemove } = useCartActions()
-
-		const handleIncrementItem = () => handleIncrement({ id, quantity })
-		const handleDecrementItem = () => handleDecrement({ id, quantity })
-		const handleRemoveItem = () => handleRemove({ id })
+		const { handleIncrement, handleDecrement, handleRemove, isUpdating } =
+			useCartActions()
 
 		const totalPrice = price * quantity
+
+		const formatPrice = useCallback((price: number) => {
+			return new Intl.NumberFormat('ru-RU').format(price)
+		}, [])
 
 		return (
 			<li className={styles.cartItem} id={id}>
@@ -38,13 +39,16 @@ export const CartItem = memo(
 					<div className={styles.cartItemRight}>
 						<CounterCart
 							quantity={quantity}
-							onIncrement={handleIncrementItem}
-							onDecrement={handleDecrementItem}
+							onIncrement={() => handleIncrement({ id, quantity })}
+							onDecrement={() => handleDecrement({ id, quantity })}
+							isLoading={isUpdating}
 						/>
-						<div className={styles.cartItemPrice}>{totalPrice} ₽</div>
+						<div className={styles.cartItemPrice}>
+							{formatPrice(totalPrice)} ₽
+						</div>
 						<Button
 							className={`btnBase ${styles.cartItemDelete}`}
-							onClick={handleRemoveItem}
+							onClick={() => handleRemove({ id })}
 							aria-label={`Удалить ${name} из корзины`}
 						>
 							<GrFormClose />

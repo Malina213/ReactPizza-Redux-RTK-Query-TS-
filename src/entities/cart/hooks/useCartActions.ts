@@ -13,7 +13,8 @@ interface CartActionsProps {
 
 export const useCartActions = () => {
 	const { data: cartItems = [] } = useGetCartQuery()
-	const [updateQuantity] = useUpdateCartItemQuantityMutation()
+	const [updateQuantity, { isLoading: isUpdating }] =
+		useUpdateCartItemQuantityMutation()
 	const [removeFromCart] = useRemoveFromCartMutation()
 
 	const handleIncrement = useCallback(
@@ -100,6 +101,7 @@ export const useCartActions = () => {
 		handleIncrement,
 		handleDecrement,
 		handleRemove,
-		handleClearCart
+		handleClearCart,
+		isUpdating
 	}
 }

@@ -1,35 +1,12 @@
 import type { Cart } from '@entities/cart/types'
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
-const BASE_URL = 'https://679231bbcf994cc68049167c.mockapi.io/'
-
-// Валидация данных корзины
-const validateCartItem = (item: Cart): boolean => {
-	return (
-		typeof item.name === 'string' &&
-		item.name.length > 0 &&
-		item.name.length <= 200 &&
-		typeof item.imageUrl === 'string' &&
-		item.imageUrl.length > 0 &&
-		typeof item.dough === 'string' &&
-		item.dough.length > 0 &&
-		typeof item.size === 'string' &&
-		item.size.length > 0 &&
-		typeof item.price === 'number' &&
-		item.price > 0 &&
-		typeof item.quantity === 'number' &&
-		item.quantity > 0 &&
-		item.quantity <= 100
-	)
-}
+const BASE_URL = import.meta.env.VITE_API_BASE_URL
+const API_TIMEOUT = parseInt(import.meta.env.REACT_APP_API_TIMEOUT || '10000')
 
 const validateQuantity = (quantity: number): boolean => {
 	return Number.isInteger(quantity) && quantity > 0 && quantity <= 100
 }
-
-const csrfToken = document
-	.querySelector('meta[name="csrf-token"]')
-	?.getAttribute('content')
 
 export const cartApi = createApi({
 	reducerPath: 'cartApi',
@@ -37,34 +14,23 @@ export const cartApi = createApi({
 		baseUrl: BASE_URL,
 		prepareHeaders: headers => {
 			headers.set('Content-Type', 'application/json')
-			if (csrfToken) {
-				headers.set('X-CSRF-Token', csrfToken)
-			}
 			return headers
-		}
+		},
+		timeout: API_TIMEOUT
 	}),
 	tagTypes: ['Cart'],
 	endpoints: builder => ({
 		getCart: builder.query<Cart[], void>({
-			query: () => ({
-				url: 'cart',
-				method: 'GET'
-			}),
+			query: () => 'cart',
 			providesTags: ['Cart']
 		}),
 
 		addToCart: builder.mutation<Cart, Cart>({
-			query: body => {
-				if (!validateCartItem(body)) {
-					throw new Error('Invalid cart item data')
-				}
-
-				return {
-					url: 'cart',
-					method: 'POST',
-					body
-				}
-			},
+			query: body => ({
+				url: 'cart',
+				method: 'POST',
+				body
+			}),
 			invalidatesTags: ['Cart']
 		}),
 
@@ -104,7 +70,6 @@ export const cartApi = createApi({
 		removeFromCart: builder.mutation<void, string>({
 			query: id => {
 				if (!id || typeof id !== 'string') throw new Error('Invalid item ID')
-
 				return {
 					url: `cart/${encodeURIComponent(id)}`,
 					method: 'DELETE'
